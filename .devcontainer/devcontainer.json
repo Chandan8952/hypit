@@ -1,0 +1,21 @@
+{
+  "name": "Hypit AI Video Studio",
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22",
+      "pnpmVersion": "10.33.0"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 && curl -LsSf https://astral.sh/uv/install.sh | sh && pnpm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
